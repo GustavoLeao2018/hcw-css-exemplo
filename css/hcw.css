@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-size: 15px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.hcw-container { padding-left: 16px; padding-right:  16px; }
+.hcw-painel    { margin-top:  16px;  margin-bottom: 16px; }
+
+
+code { padding-left: 4px; padding-right: 4px;  }
+hr { border: 1px solid black; }
+
+h1 { font-size: 64px; }
+h2 { font-size: 48px; }
+h3 { font-size: 36px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 18px; }
+
+.hcw-text-center  { text-align: center;  }
+.hcw-text-left    { text-align: left;    }
+.hcw-text-right   { text-align: right;   }
+.hcw-text-justify { text-align: justify; }
+
+.hcw-tiny     { background-color: 10px; }
+.hcw-small    { background-color: 12px; }
+.hcw-medium   { background-color: 15px; }
+.hcw-large    { background-color: 18px; }
+.hcw-xlarge   { background-color: 24px; }
+.hcw-xxlarge  { background-color: 36px; }
+.hcw-xxxlarge { background-color: 48px; }
+.hcw-jumbo    { background-color: 64px; }
+
+
+.hcw-card-1         { box-shadow: 1px 5px 5px 1px #000; margin: 1em; }
+.hcw-card-1 a       { text-decoration: none; }
+.hcw-card-1:hover   {  }
+.hcw-card-title     { padding: 5px; text-align: center; font-size: 20px; font-weight: bold;  }
+.hcw-card-image     { padding: 5px; text-align: center; }
+.hcw-card-image img { width: 50%; height: 50%; }
+.hcw-card-footer    { padding: 16px; }
+
+.hcw-row-flex { display: flex; flex-wrap: wrap; justify-content: space-around; }
+.hcw-column-flex { width: 40vh; }
+
+
+/* Menu dentro do cabeçalho */
+header nav {
+    display: flex; /* Define como  flex o display do menu */
+    justify-content: flex-start; /* Define como os itens alinhados à esquerda */
+    padding: 1em; /* Da um espaçamento de 1em para a barra de menu */
+}
+
+
+header nav ul {
+    list-style: none; /* Tira o estilo de lista para os itens */
+    margin: 0; /* Tira toda a margem da lista. */
+    padding: 0; /* Tira todo o espaçamento para dentro. */
+    display: flex; /* Define como  flex o display da lista */
+}
+
+header nav ul li a {
+    position: relative; /* Define como uma posição relativa para cada link */
+    display: inline-block; /* Define como inline-bloc o display de cada link */
+    padding: 1em; /* Da um espaçamento de 1em para cada link */
+    text-decoration: none; /* Tira a decoração de cada item */
+}
+
+/* Menu para telas até 800px */
+@media  all and (max-width: 800px){
+    header nav ul {
+        flex-grow: 1; /* Define que o item crescerá em relação aos outros itens */
+        justify-content: space-between; /* Distribui uniformemente na linha os itens */
+    }
+}
+
+/* Menu para telas até 600px */
+@media all and (max-width: 600px){
+    header nav ul {
+        flex-direction: column; /* inverte de linha para coluna o sentido */
+        align-items: center; /* Alinha os itens ao centro: */
+        width:  100%; /* Ocupa 100% da tela */
+    }
+}
